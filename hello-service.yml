@@ -1,0 +1,5 @@
+server:
+  port: 8081
+
+application:
+  message: Hello Service From Config Server
