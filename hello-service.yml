@@ -3,3 +3,12 @@ server:
 
 application:
   message: Hello Service From Config Server
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      greetService:
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s  
